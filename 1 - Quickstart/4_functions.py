@@ -8,6 +8,8 @@ def isprime(n):
             print("  {} is divisible by {}".format(n, x))
             return False
     else:
+        # Confusing for...else construct explained at:
+        # http://python-notes.curiousefficiency.org/en/latest/python_concepts/break_else.html
         print("* {} is a prime number".format(n))
         return True
 
