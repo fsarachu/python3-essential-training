@@ -4,3 +4,5 @@ try:
         print(line)
 except:
     print("something went wrong while reading the file")
+
+print("After badness") # Excecution continues after handled error
