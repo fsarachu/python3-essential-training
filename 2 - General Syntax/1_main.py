@@ -7,5 +7,5 @@ def hello():
     print("Hello World!")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # See more: http://stackoverflow.com/questions/419163/what-does-if-name-main-do
     main()
