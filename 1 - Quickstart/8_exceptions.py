@@ -5,4 +5,4 @@ try:
 except:
     print("something went wrong while reading the file")
 
-print("After badness") # Excecution continues after handled error
+print("After badness")  # Execution continues after handled error
