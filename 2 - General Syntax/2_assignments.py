@@ -14,6 +14,9 @@ def main():
 
     print("---------------------")
 
+    # In an assignment statement, the right-hand side is always evaluated fully
+    # before doing the actual setting of variables. In this case it swaps 'a' and 'b'
+
     a, b = b, a
     print("a: {}".format(a))
     print("b: {}".format(b))
