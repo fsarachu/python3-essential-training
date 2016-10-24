@@ -31,6 +31,11 @@ def main():
     a = [1, 2, 3, 4, 5]  # Square brackets define a list
     print(a)
 
+    print("---------------------")
+
+    a = {1, 2, 3, 4, 5}  # Curly braces define a set
+    print(a)
+
 
 if __name__ == '__main__':
     main()
