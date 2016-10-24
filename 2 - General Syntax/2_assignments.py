@@ -23,6 +23,9 @@ def main():
 
     print("---------------------")
 
+    a = (1, 2, 3, 4, 5)  # Parentheses defines a tuple
+    print(a)
+
 
 if __name__ == '__main__':
     main()
