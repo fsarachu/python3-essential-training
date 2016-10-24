@@ -7,5 +7,7 @@ if __name__ == '__main__':
 
     if a < b:
         print("a ({}) is less than b ({})".format(a, b))
-    else:
+    elif a > b:
         print("a ({}) is not less than b ({})".format(a, b))
+    else:
+        print("a ({}) is equal to b ({})".format(a, b))
