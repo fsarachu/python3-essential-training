@@ -23,7 +23,12 @@ def main():
 
     print("---------------------")
 
-    a = (1, 2, 3, 4, 5)  # Parentheses defines a tuple
+    a = (1, 2, 3, 4, 5)  # Parentheses define a tuple
+    print(a)
+
+    print("---------------------")
+
+    a = [1, 2, 3, 4, 5]  # Square brackets define a list
     print(a)
 
 
