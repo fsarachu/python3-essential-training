@@ -59,3 +59,11 @@ print("queue: {}".format(queue))
 
 print("queue.popleft(): {}".format(queue.popleft()))  # The second to arrive now leaves
 print("queue: {}".format(queue))
+
+print("\n--- List Comprehensions ---")
+
+l = [x ** 2 for x in range(5)]
+print("l = [x**2 for x in range(5)]: {}".format(l))
+
+l = [x for x in l if x % 2 == 0]
+print("l = [x for x in l if x % 2 == 0]: {}".format(l))
