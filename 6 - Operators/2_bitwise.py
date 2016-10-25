@@ -26,3 +26,7 @@ b(x << 2)
 
 print("x >> 5: ", end='')
 b(x >> 5)
+
+print("~ x: ", end='')
+b(~ x)
+
