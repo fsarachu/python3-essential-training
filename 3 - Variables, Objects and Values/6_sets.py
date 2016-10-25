@@ -9,6 +9,10 @@ print("s: {}".format(s))
 animals = {'kangaroo', 'elephant', 'jaguar', 'elephant', 'lion'}
 print(animals)
 
+# Membership testing
+print("'kangaroo' in animals: {}".format('kangaroo' in animals))
+print("'dog' in animals: {}".format('dog' in animals))
+
 # Set operations
 a = set('abracadabra')
 b = set('alacazam')
