@@ -5,6 +5,6 @@ choices = dict(
     four='fourth'
 )
 
-v = 'two'
+v = 'six'
 
 print(choices[v])
