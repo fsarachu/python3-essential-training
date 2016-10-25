@@ -7,4 +7,4 @@ choices = dict(
 
 v = 'six'
 
-print(choices.get(v, 'other'))
+print(choices.get(v, 'other'))  # Return the value for the key inside 'v', if it doesnt exist return 'other'
