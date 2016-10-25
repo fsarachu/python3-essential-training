@@ -62,8 +62,8 @@ print("queue: {}".format(queue))
 
 print("\n--- List Comprehensions ---")
 
-l = [x ** 2 for x in range(5)]
+l = [x ** 2 for x in range(5)]  # All squares from 0 to 4
 print("l = [x**2 for x in range(5)]: {}".format(l))
 
-l = [x for x in l if x % 2 == 0]
+l = [x for x in l if x % 2 == 0]  # Keep only even numbers
 print("l = [x for x in l if x % 2 == 0]: {}".format(l))
