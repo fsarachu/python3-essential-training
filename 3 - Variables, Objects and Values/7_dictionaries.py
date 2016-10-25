@@ -4,7 +4,7 @@
 # The main operations on a dictionary are storing a value with some key and extracting the value given the key.
 
 # Create a simple dictionary
-tel = {'Max': 421324, 'John': 432857}
+tel = {'Max': 421324, 'John': 432857}  # Or: tel = dict(Max=421324, John=432857)
 print("tel: {}".format(tel))
 
 # Add new pair
