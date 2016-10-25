@@ -1,3 +1,5 @@
+from collections import deque
+
 # A list is mutable, but less efficient than a tuple
 
 print("\n--- Some List Methods ---")
@@ -40,3 +42,20 @@ print("stack.pop(): {}".format(stack.pop()))
 print("stack.pop(): {}".format(stack.pop()))
 
 print("stack: {}".format(stack))
+
+print("\n--- Lists as Queues ---")
+
+queue = deque(['John', 'Michael', 'Max'])
+print("queue: {}".format(queue))
+
+queue.append('Eric')  # Eric arrives
+print("queue.append('Eric'): {}".format(queue))
+
+queue.append('Terry')  # Terry arrives
+print("queue.append('Terry'): {}".format(queue))
+
+print("queue.popleft(): {}".format(queue.popleft()))  # The first to arrive now leaves
+print("queue: {}".format(queue))
+
+print("queue.popleft(): {}".format(queue.popleft()))  # The second to arrive now leaves
+print("queue: {}".format(queue))
