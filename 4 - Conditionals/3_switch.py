@@ -7,4 +7,4 @@ choices = dict(
 
 v = 'six'
 
-print(choices[v])
+print(choices.get(v, 'other'))
