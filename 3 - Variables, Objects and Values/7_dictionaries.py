@@ -26,3 +26,7 @@ print("sorted(tel.keys()): {}".format(sorted(tel.keys())))
 print("'Brian' in tel: {}".format('Brian' in tel))
 print("'Jack' in tel: {}".format('Jack' in tel))
 print("'Jack' not in tel: {}".format('Jack' not in tel))
+
+# Dictionary comprehension
+power = {x: x ** 2 for x in (1, 2, 3, 4, 5, 6)}
+print("power: {}".format(power))
