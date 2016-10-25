@@ -12,3 +12,10 @@ for c in s:
 
 print("\n--------------------")
 
+for c in s:
+    if c == 's':
+        break
+    print(c, end=' ')
+
+print("\n--------------------")
+
