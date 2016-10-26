@@ -1,0 +1,11 @@
+l = [x for x in range(11)]
+print("l: {}".format(l))
+print("l[0]: {}".format(l[0]))
+print("l[3]: {}".format(l[3]))
+print("l[0:5]: {}".format(l[0:5]))
+print("l[:]: {}".format(l[:]))
+print("l[1:]: {}".format(l[1:]))
+print("l[:3]: {}".format(l[:3]))
+print("l[3:8:1]: {}".format(l[3:8:1]))
+print("l[3:8:2]: {}".format(l[3:8:2]))
+print("l[3:8:3]: {}".format(l[3:8:3]))
