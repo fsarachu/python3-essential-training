@@ -1,0 +1,5 @@
+print("True and True: {}".format(True and True))
+print("True and True: {}".format(True and False))
+print("True or True: {}".format(True or True))
+print("True or True: {}".format(True or False))
+print("not (True or False): {}".format(not (True or False)))
