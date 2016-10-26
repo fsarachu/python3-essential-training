@@ -20,3 +20,9 @@ y = 5
 print("y = 5")
 
 print("x is y: {}".format(x is y))
+
+x, y = [3], [3]
+print("x, y = [3], [3]")
+
+print("x == y: {}".format(x == y))
+print("x is y: {}".format(x is y))
