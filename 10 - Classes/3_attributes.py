@@ -1,6 +1,6 @@
 class Duck:
-    def __init__(self, name):
-        self._name = name
+    def __init__(self, **kwargs):
+        self._name = kwargs.get('name', 'donald')
 
     def get_name(self):
         return self._name
@@ -16,7 +16,7 @@ class Duck:
 
 
 if __name__ == '__main__':
-    lilly = Duck('Lilly')
+    lilly = Duck(name='Lilly')
 
     lilly.quack()
     lilly.walk()
