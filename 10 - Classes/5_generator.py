@@ -25,10 +25,24 @@ class InclusiveRange:
 
 
 def main():
-    o = range(25)
+    o1 = InclusiveRange(15)
+    o2 = InclusiveRange(5, 15)
+    o3 = InclusiveRange(5, 15, 3)
 
-    for i in o:
+    for i in o1:
         print(i, end=' ')
+
+    print("\n------------------")
+
+    for i in o2:
+        print(i, end=' ')
+
+    print("\n------------------")
+
+    for i in o3:
+        print(i, end=' ')
+
+    print("\n------------------")
 
 
 if __name__ == '__main__':
