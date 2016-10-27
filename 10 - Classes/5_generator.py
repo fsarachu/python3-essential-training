@@ -17,7 +17,11 @@ class InclusiveRange:
             raise TypeError('Too many arguments, at most 3 are spected, got {}'.format(arg_count))
 
     def __iter__(self):
-        pass
+        i = self.start
+
+        while i <= self.stop:
+            yield i
+            i += self.steps
 
 
 def main():
