@@ -9,13 +9,10 @@ class InclusiveRange:
             self.stop = args[0]
             self.steps = 1
         elif arg_count == 2:
-            self.start = args[0]
-            self.stop = args[1]
+            self.start, self.stop = args
             self.steps = 1
         elif arg_count == 3:
-            self.start = args[0]
-            self.stop = args[1]
-            self.steps = args[2]
+            self.start, self.stop, self.steps = args
         else:
             raise TypeError('Too many arguments, at most 3 are spected, got {}'.format(arg_count))
 
