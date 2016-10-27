@@ -8,7 +8,6 @@ def inclusive_range(start, stop, steps=1):
 
     while i <= stop:
         yield i
-        print('after yield')
         i += steps
 
 
