@@ -1,4 +1,10 @@
-f = open('kangaroo.jpg', 'rb')
+buffer_size = 524288  # 500kb
 
-for line in f:
-    print(line, end='')
+in_file = open('kangaroo.jpg', 'rb')
+out_file = open('kangaroo_copy.jpg', 'wb')
+
+buffer = in_file.read(buffer_size)
+
+while len(buffer):
+    out_file.write(buffer)
+    buffer = in_file.read(buffer_size)
