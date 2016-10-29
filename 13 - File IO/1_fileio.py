@@ -1,4 +1,5 @@
-fh = open('lines.txt', 'r')
+infile = open('lines.txt', 'r')
+outfile = open('output.txt', 'w')
 
-for line in fh:
-    print(line, end='')
+for index, line in enumerate(infile):
+    print('Index: {}, Line Content: {}'.format(index, line), file=outfile, end='')
