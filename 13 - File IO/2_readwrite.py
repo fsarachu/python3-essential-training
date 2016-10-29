@@ -1,9 +1,16 @@
+buffersize = 5000
+
 infile = open('bigfile.txt', 'r')
 outfile = open('bigoutput.txt', 'w')
 
-print('Writing to \'{}\'...'.format(outfile))
+buffer = infile.read(buffersize)
 
-for index, line in enumerate(infile):
-    print('Index: {}, Line Content: {}'.format(index, line), file=outfile, end='')
+print('Writing to \'{}\'...'.format(outfile.name))
 
+while len(buffer):
+    print('.', end='')
+    outfile.write(buffer)
+    buffer = infile.read(buffersize)
+
+print('\n')
 print('Done!')
