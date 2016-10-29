@@ -1,10 +1,13 @@
-buffer_size = 524288  # 500kb
+def read_buffered(file):
+    buffer_size = 524288  # 500kb
+    return in_file.read(buffer_size)
+
 
 in_file = open('kangaroo.jpg', 'rb')
 out_file = open('kangaroo_copy.jpg', 'wb')
 
-buffer = in_file.read(buffer_size)
+buffer = read_buffered(in_file)
 
 while len(buffer):
     out_file.write(buffer)
-    buffer = in_file.read(buffer_size)
+    buffer = read_buffered(in_file)
