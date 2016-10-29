@@ -1,5 +1,5 @@
 a, b = 5, 42
 
-s = 'a is {}, b is {}'
+s1 = 'a is {0}, b is {1}, again a is {0}'
 
-print(s.format(a, b))
+print(s1.format(a, b))
