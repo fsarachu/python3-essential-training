@@ -1,6 +1,11 @@
 import _sqlite3
 
 
+def insert(db, row):
+    db.execute('INSERT INTO test (t1, i1) VALUES (?, ?)', (row['t1'], row['i1']))
+    db.commit()
+
+
 def main():
     db = _sqlite3.connect('test.db')
 
