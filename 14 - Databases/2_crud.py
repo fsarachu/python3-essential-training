@@ -21,7 +21,7 @@ def delete(db, t1):
     db.commit()
 
 
-def disp_rows(db):
+def display_rows(db):
     cursor = db.execute('SELECT * FROM test ORDER BY t1')
     for row in cursor:
         print('{}: {}'.format(row['t1'], row['i1']))
@@ -32,6 +32,12 @@ def main():
     db.row_factory = _sqlite3.Row
     db.execute('DROP TABLE IF EXISTS test')
     db.execute('CREATE TABLE test(t1 TEXT, i1 INT)')
+
+    insert(db, dict(t1='one', i1=1))
+    insert(db, dict(t1='two', i1=2))
+    insert(db, dict(t1='three', i1=3))
+    insert(db, dict(t1='four', i1=4))
+    display_rows(db)
 
 
 if __name__ == '__main__':
