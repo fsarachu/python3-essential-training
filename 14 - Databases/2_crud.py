@@ -7,8 +7,8 @@ def insert(db, row):
 
 
 def retrieve(db, t1):
-    db.execute('SELECT * FROM test WHERE t1 = ?', (t1,))
-    db.commit()
+    cursor = db.execute('SELECT * FROM test WHERE t1 = ?', (t1,))
+    return cursor.fetchone()
 
 
 def main():
