@@ -29,6 +29,9 @@ def disp_rows(db):
 
 def main():
     db = _sqlite3.connect('test.db')
+    db.row_factory = _sqlite3.Row
+    db.execute('DROP TABLE IF EXISTS test')
+    db.execute('CREATE TABLE test(t1 TEXT, i1 INT)')
 
 
 if __name__ == '__main__':
