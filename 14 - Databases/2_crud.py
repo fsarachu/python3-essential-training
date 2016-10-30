@@ -16,6 +16,11 @@ def update(db, row):
     db.commit()
 
 
+def delete(db, t1):
+    db.execute('DELETE FROM test WHERE t1 = ?', (t1,))
+    db.commit()
+
+
 def main():
     db = _sqlite3.connect('test.db')
 
