@@ -21,6 +21,12 @@ def delete(db, t1):
     db.commit()
 
 
+def disp_rows(db):
+    cursor = db.execute('SELECT * FROM test ORDER BY t1')
+    for row in cursor:
+        print('{}: {}'.format(row['t1'], row['i1']))
+
+
 def main():
     db = _sqlite3.connect('test.db')
 
