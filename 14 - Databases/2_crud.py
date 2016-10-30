@@ -11,6 +11,11 @@ def retrieve(db, t1):
     return cursor.fetchone()
 
 
+def update(db, row):
+    db.execute('UPDATE test SET i1 = ? WHERE t1 = ?', (row['i1'], row['t1']))
+    db.commit()
+
+
 def main():
     db = _sqlite3.connect('test.db')
 
