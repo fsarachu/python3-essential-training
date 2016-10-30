@@ -48,6 +48,11 @@ def main():
     update(db, dict(t1='two', i1=200))
     display_rows(db)
 
+    print('\nDelete rows')
+    delete(db, 'four')
+    delete(db, 'three')
+    display_rows(db)
+
 
 if __name__ == '__main__':
     main()
