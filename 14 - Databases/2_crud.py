@@ -33,11 +33,15 @@ def main():
     db.execute('DROP TABLE IF EXISTS test')
     db.execute('CREATE TABLE test(t1 TEXT, i1 INT)')
 
+    print('Create rows')
     insert(db, dict(t1='one', i1=1))
     insert(db, dict(t1='two', i1=2))
     insert(db, dict(t1='three', i1=3))
     insert(db, dict(t1='four', i1=4))
     display_rows(db)
+
+    print('Retrieve rows')
+    print(dict(retrieve(db, 'one')), dict(retrieve(db, 'two')))
 
 
 if __name__ == '__main__':
