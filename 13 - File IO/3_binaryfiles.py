@@ -1,6 +1,6 @@
 def read_buffered(file):
     buffer_size = 524288  # 500kb
-    return in_file.read(buffer_size)
+    return file.read(buffer_size)
 
 
 in_file = open('kangaroo.jpg', 'rb')
