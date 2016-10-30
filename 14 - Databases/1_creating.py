@@ -11,3 +11,8 @@ for k in values:
     db.execute('INSERT INTO test (t1, i1) VALUES (?, ?)', (k, values[k]))
 
 db.commit()
+
+cursor = db.execute('SELECT * FROM test ORDER BY i1')
+
+for row in cursor:
+    print(row)
