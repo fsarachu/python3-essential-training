@@ -6,6 +6,11 @@ def insert(db, row):
     db.commit()
 
 
+def retrieve(db, t1):
+    db.execute('SELECT * FROM test WHERE t1 = ?', (t1,))
+    db.commit()
+
+
 def main():
     db = _sqlite3.connect('test.db')
 
