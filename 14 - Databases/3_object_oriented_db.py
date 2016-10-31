@@ -23,10 +23,14 @@ class Database:
 
         return result
 
+    def insert(self, row):
+        self.connection.execute('INSERT INTO test (t1, i1) VALUES (?, ?)', (row['t1'], row['i1']))
+        self.connection.commit()
+
 
 def main():
     db = Database('oop.db')
-    db.raw_sql('INSERT INTO test (t1, i1) VALUES ("one", 1)')
+    db.insert(dict(t1='one', i1=100))
 
 
 if __name__ == '__main__':
