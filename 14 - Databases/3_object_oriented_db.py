@@ -27,10 +27,15 @@ class Database:
         self.connection.execute('INSERT INTO test (t1, i1) VALUES (?, ?)', (row['t1'], row['i1']))
         self.connection.commit()
 
+    def retrieve(self, t1):
+        cursor = self.connection.execute('SELECT * FROM test WHERE t1 = ?', (t1,))
+        return cursor.fetchone()
+
 
 def main():
     db = Database('oop.db')
     db.insert(dict(t1='one', i1=100))
+    print(db.retrieve('one'))
 
 
 if __name__ == '__main__':
