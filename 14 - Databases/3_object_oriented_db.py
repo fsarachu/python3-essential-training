@@ -35,6 +35,10 @@ class Database:
         self.connection.execute('UPDATE test SET i1 = ? WHERE t1 = ?', (row['i1'], row['t1']))
         self.connection.commit()
 
+    def delete(self, t1):
+        self.connection.execute('DELETE FROM test WHERE t1 = ?', (t1,))
+        self.connection.commit()
+
 
 def main():
     db = Database('oop.db')
@@ -42,6 +46,8 @@ def main():
     db.insert(dict(t1='one', i1=1))
     print(db.retrieve('one'))
     db.update(dict(t1='one', i1=100))
+    print(db.retrieve('one'))
+    db.delete('one')
     print(db.retrieve('one'))
 
 
