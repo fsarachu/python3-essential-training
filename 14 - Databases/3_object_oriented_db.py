@@ -27,3 +27,16 @@ class Database:
     @table_name.deleter
     def table_name(self):
         del self._properties['table_name']
+
+
+def main():
+    db = Database('oop.db', 'test')
+    print db.file_name
+    print db.table_name
+
+    db.file_name = 'other.db'
+    print db.file_name
+
+
+if __name__ == '__main__':
+    main()
