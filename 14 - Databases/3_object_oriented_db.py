@@ -12,7 +12,7 @@ class Database:
     def connection(self):
         return self._properties['connection']
 
-    def sql(self, sql_string, commit=True):
+    def raw_sql(self, sql_string, commit=True):
         """Executes 'sql_string' exactly as received and commits changes automatically"""
 
         result = self.connection.execute(sql_string)
@@ -25,7 +25,7 @@ class Database:
 
 def main():
     db = Database('oop.db')
-    db.sql('INSERT INTO test (t1, i1) VALUES ("one", 1)')
+    db.raw_sql('INSERT INTO test (t1, i1) VALUES ("one", 1)')
 
 
 if __name__ == '__main__':
