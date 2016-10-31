@@ -13,7 +13,8 @@ class Database:
         return self._properties['connection']
 
     def raw_sql(self, sql_string, commit=True):
-        """Executes 'sql_string' exactly as received and commits changes automatically"""
+        """Executes 'sql_string' exactly as received and commits changes automatically (unless second parameter 'commit'
+         is specified as False"""
 
         result = self.connection.execute(sql_string)
 
