@@ -31,11 +31,11 @@ class Database:
 
 def main():
     db = Database('oop.db', 'test')
-    print db.file_name
-    print db.table_name
+    print(db.file_name)
+    print(db.table_name)
 
     db.file_name = 'other.db'
-    print db.file_name
+    print(db.file_name)
 
 
 if __name__ == '__main__':
