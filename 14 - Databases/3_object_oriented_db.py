@@ -1,41 +1,20 @@
+import _sqlite3
+
+
 class Database:
-    def __init__(self, file_name, table_name):
+    def __init__(self, db_name):
         self._properties = dict()
-        self._properties['file_name'] = file_name
-        self._properties['table_name'] = table_name
+        self._properties['connection'] = _sqlite3.connect('db_name')
+        self._properties['connection'].execute('DROP TABLE IF EXISTS test')
+        self._properties['connection'].execute('CREATE TABLE test(t1 TEXT, i1 INT)')
 
     @property
-    def file_name(self):
-        return self._properties.get('file_name', None)
-
-    @file_name.setter
-    def file_name(self, name):
-        self._properties['file_name'] = name
-
-    @file_name.deleter
-    def file_name(self):
-        del self._properties['file_name']
-
-    @property
-    def table_name(self):
-        return self._properties.get('table_name', None)
-
-    @table_name.setter
-    def table_name(self, name):
-        self._properties['table_name'] = name
-
-    @table_name.deleter
-    def table_name(self):
-        del self._properties['table_name']
+    def connection(self):
+        return self._properties['connection']
 
 
 def main():
-    db = Database('oop.db', 'test')
-    print(db.file_name)
-    print(db.table_name)
-
-    db.file_name = 'other.db'
-    print(db.file_name)
+    db = Database('oop.db')
 
 
 if __name__ == '__main__':
