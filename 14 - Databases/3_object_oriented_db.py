@@ -31,10 +31,17 @@ class Database:
         cursor = self.connection.execute('SELECT * FROM test WHERE t1 = ?', (t1,))
         return cursor.fetchone()
 
+    def update(self, row):
+        self.connection.execute('UPDATE test SET i1 = ? WHERE t1 = ?', (row['i1'], row['t1']))
+        self.connection.commit()
+
 
 def main():
     db = Database('oop.db')
-    db.insert(dict(t1='one', i1=100))
+
+    db.insert(dict(t1='one', i1=1))
+    print(db.retrieve('one'))
+    db.update(dict(t1='one', i1=100))
     print(db.retrieve('one'))
 
 
