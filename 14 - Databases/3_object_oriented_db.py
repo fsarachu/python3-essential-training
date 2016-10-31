@@ -1,8 +1,8 @@
 class Database:
     def __init__(self, file_name, table_name):
         self._properties = dict()
-        self._properties[file_name] = file_name
-        self._properties[table_name] = table_name
+        self._properties['file_name'] = file_name
+        self._properties['table_name'] = table_name
 
     @property
     def file_name(self):
