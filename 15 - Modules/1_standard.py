@@ -12,9 +12,9 @@ def main():
     print('cwd: {}'.format(os.getcwd()))
     print('urandom; {}'.format(os.urandom(25)))
 
-    import urllib.request
-
-    page = urllib.request.urlopen('https://webapp2.readthedocs.io/en/latest/')
+    # import urllib.request
+    #
+    # page = urllib.request.urlopen('https://webapp2.readthedocs.io/en/latest/')
 
     # for line in page:
     #     print(str(line, encoding='utf_8'), end='')
@@ -27,6 +27,14 @@ def main():
     print('x: {}'.format(x))
     random.shuffle(x)
     print('shuffled x: {}'.format(x))
+
+    import datetime
+
+    now = datetime.datetime.now()
+    print('now: {}'.format(now))
+    print('now.year: {}'.format(now.year))
+    print('now.hour: {}'.format(now.hour))
+    print('now.second: {}'.format(now.second))
 
 
 if __name__ == '__main__':
