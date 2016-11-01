@@ -16,8 +16,15 @@ def main():
 
     page = urllib.request.urlopen('https://webapp2.readthedocs.io/en/latest/')
 
-    for line in page:
-        print(str(line, encoding='utf_8'), end='')
+    # for line in page:
+    #     print(str(line, encoding='utf_8'), end='')
+
+    import random
+
+    for i in range(10):
+        print(random.randint(1, 100), end=' ')
+
+    print()
 
 
 if __name__ == '__main__':
