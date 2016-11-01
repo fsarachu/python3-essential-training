@@ -21,10 +21,12 @@ def main():
 
     import random
 
-    for i in range(10):
-        print(random.randint(1, 100), end=' ')
+    print('random int: {}'.format(random.randint(1, 100)))
 
-    print()
+    x = list(range(25))
+    print('x: {}'.format(x))
+    random.shuffle(x)
+    print('shuffled x: {}'.format(x))
 
 
 if __name__ == '__main__':
